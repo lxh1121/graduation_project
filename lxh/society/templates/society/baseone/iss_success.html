@@ -1,0 +1,28 @@
+{% extends 'society/base.html' %}
+
+{% block style %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/ba1_title.css' %}">
+    <link rel="stylesheet" href="{% static 'society/css/base2.css' %}">
+    <link rel="stylesheet" href="{% static 'society/css/baseone/iss.css' %}">
+{% endblock %}
+
+{% block head %}
+    <button class="fbcontent clear" ><a href="{% url 'society:iss_cont' %}" class="iss">发布内容</a></button>
+{#    <img src="{% url 'media' request.session.photo %}" alt="" width="35px" height="35px" class="base-head-img bushuang">#}
+    <a href="{% url 'society:change_data' %}"><img src="{% url 'media' request.session.photo %}" alt="" width="35px" height="35px"></a>
+{% endblock %}
+
+{% block usname %}
+    提交成功
+{% endblock %}
+
+{% block content %}
+    <div class="iss-success">
+        <img src="{% static 'society/image/tjcg.png' %}" alt="">
+        <span class="iss-success-one">提交成功</span>
+        <span class="iss-success-two">请您耐心等待审核</span>
+    </div>
+    <button  class="btn btn-succ"><a href="{% url 'society:change_data' %}">返回首页</a></button>
+{% endblock %}
+

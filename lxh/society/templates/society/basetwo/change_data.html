@@ -1,0 +1,54 @@
+{% extends 'society/base2.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/change_data.css' %}">
+{% endblock %}
+
+{% block title %}
+    个人资料
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'society:change_data' %}" method="post" class="logform" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group left_label">
+            {{ form.photo.label_tag }}
+            <div class="head-zo">
+                <img src="{% url 'media' request.session.photo %}" alt="" width="70px" height="70px" class="head-img show1">
+                <div class="opcity">点击修改</div>
+            </div>
+            <input type="file" name="photo" id="id_photo" accept="image/*" required class="head-file">
+
+        </div>
+      <div class="form-group left_label">
+          {{ form.info.label_tag }}
+          {{ form.info }}
+          <span class="err">{{ error1 }}</span>
+      </div>
+      <div class="form-group">
+          {{ form.phone.label_tag }}
+          {{ form.phone }}
+          <span class="err">{{ error2 }}</span>
+      </div>
+      <button type="submit" class="btn btn-default">修改</button>
+    </form>
+{% endblock %}
+
+{% block js %}
+    <script></script>
+    <script>
+        $('#id_photo').change(function(e) {
+            var _URL = window.URL || window.webkitURL;
+            var file, img;
+            if ((file = this.files[0])) {
+                img = new Image();
+                img.onload = function() {
+                    $('.show1').attr('src', this.src);
+                    console.log(this.width)
+                };
+                img.src = _URL.createObjectURL(file);
+            }
+        })
+    </script>
+{% endblock %}

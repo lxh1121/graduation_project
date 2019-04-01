@@ -1,0 +1,37 @@
+{% extends 'society/index.html' %}
+
+{% load static %}
+{% block content %}
+<header class="mb-5"><h1>Login</h1></header>
+					<P class="mb-5">欢迎登陆本系统！<span class="forget-pass2"><a href="{% url 'society:regis' %}">没有账号？马上注册</a></span></P>
+                    <form action="{% url 'society:login' %}" method="post" class="subscribe-form stu_login_error">
+                        {% csrf_token %}
+               	    	<div class="row form-section">
+
+							<div class="col-md-10 col-sm-7 col-xs-7">
+			                      <input type="text" class="form-control"  placeholder="你的学号或手机号..." required id="contact_name" name="username" value="{% if request.session.stu_num %}{{ request.session.stu_num }}{% endif %}"/><span class="red error">{{ err1 }}</span>
+				  			</div>
+                            <div class="col-md-10 col-sm-7 col-xs-7">
+			                      <input name="password" type="password" class="form-control" id="contact_pass" placeholder="你的密码..." value="{% if request.session.password %}{{ request.session.password }}{% endif %}" required/><span class="red error">{{ err2 }}</span>
+				  			</div>
+                            <div class="col-md-8 col-sm-7 col-xs-7 check1">
+                                <input type="hidden" name="role" id="contact_role" value="学生">
+                                <div class="role">
+                                    <p class="role-stu">学生</p> <span class=""><img src="{% static 'society/image/下拉框箭头.png' %}" alt=""></span>
+                                </div>
+                                <div class="role-sele">
+                                    <div class="role-sele-1">学生</div>
+                                    <div class="role-sele-1">社团负责人</div>
+                                </div>
+				  			</div>
+                            <div class="col-md-8 col-sm-7 col-xs-7 check2">
+                                <span class="check-pas"><input type="checkbox" value="1" class="check-pas check-pas1" name="check" id="check-pas" checked><label for="check-pas">记住密码</label></span>
+                                <span class="forget-pass"><a
+                                    href="{% url 'society:forget_pas' %}">忘记密码？</a></span>
+                            </div>
+							<div class="col-md-10 col-sm-5 col-xs-5 qq">
+								<button type="submit" class="tm-btn-subscribe" id="login">登录</button>
+							</div>
+						</div>
+                    </form>
+{% endblock %}

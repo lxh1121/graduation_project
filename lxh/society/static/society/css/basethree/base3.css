@@ -1,0 +1,70 @@
+.ba_left_navga {
+    margin-top: 0;
+}
+
+.point-categ {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 10px;
+    box-sizing: border-box;
+}
+
+.point-categ > div {
+    display: flex;
+    align-items: center;
+}
+
+
+ /*内容主体*/
+.ba_left_bot {
+    box-sizing: border-box;
+    padding: 30px 30px 20px;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+
+/*消除margin-top影响*/
+.clearfix::before {
+    content: "";
+    display: table;
+}
+
+
+
+/*右侧 */
+
+.ba_right .ba_right_top {
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    height: 120px;
+    border-top: 5px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.ba_right_top > img {
+    width: 80px;
+    height: 80px;
+    margin-right: 22px;
+    float: left;
+}
+
+.ba_right_top > .blue {
+    font-family: PingFangSC-Semibold;
+    font-size: 18px;
+    color: #1992EF;
+    letter-spacing: 1.12px;
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.ba_right_top > span {
+    float: left;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #5D5F62;
+    letter-spacing: 1px;
+}

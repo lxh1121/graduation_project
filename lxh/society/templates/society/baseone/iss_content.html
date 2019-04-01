@@ -1,0 +1,138 @@
+{% extends 'society/base.html' %}
+
+{% block style %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/ba1_title.css' %}">
+    <link rel="stylesheet" href="{% static 'society/css/base2.css' %}">
+    <link rel="stylesheet" href="{% static 'society/css/baseone/iss.css' %}">
+    <script src="{% static 'tiny_mce/tiny_mce.js' %}"></script>
+{% endblock %}
+
+{% block head %}
+    <button class="fbcontent clear" ><a href="{% url 'society:iss_cont' %}" class="iss">发布内容</a></button>
+     <a href="{% url 'society:change_data' %}"><img src="{% url 'media' request.session.photo %}" alt="" width="35px" height="35px"></a>
+{% endblock %}
+
+{% block usname %}
+    发布内容
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'society:iss_cont' %}" class="form-horizontal iss_cont" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+      <div class="form-group form-group-lg">
+        <label class="col-sm-2 control-label" for="formGroupInputLarge">内容名称:</label>
+        <div class="col-sm-10">
+          <input class="form-control show1" type="text" id="formGroupInputLarge" placeholder="文章名称" name="title" required maxlength="50">
+            {{ error }}
+            <span class="show_code1 codd"></span>
+        </div>
+      </div>
+        <div class="form-group form-group-lg form-iss">
+            <label class="col-sm-2 control-label" for="formGroupInputLarge">类型:</label>
+            <div class="remove-d">
+                <input class="btn btn-default btn-cat" type="radio" name='category' value='1' checked><span class="iss-but">服务</span>
+            </div>
+            <div class="remove-a">
+                <input class="btn btn-default btn-cat" type="radio" name='category' value='2'><span class="iss-but">文艺</span>
+            </div>
+            <div class="remove-b">
+                <input class="btn btn-default btn-cat" type="radio"  name='category' value='3'><span class="iss-but">体能</span>
+            </div>
+            <div class="remove-c">
+                <input class="btn btn-default btn-cat" type="radio" name='category' value='4'><span class="iss-but">宗教</span>
+            </div>
+            <div class="remove-e">
+                <input class="btn btn-default btn-cat" type="radio" name='category' value='5'><span class="iss-but">理论研究</span>
+            </div>
+            <div class="remove-f">
+                <input class="btn btn-default btn-cat" type="radio" name='category' value='6'><span class="iss-but">专业科技</span>
+            </div>
+        </div>
+        <div class="form-group form-group-lg ai">
+            <label class="col-sm-2 control-label" for="formGroupInputLarge">作者:</label>
+            <input class="form-control author-source" type="text" id="formGroupInputLarge" placeholder="作者名" name="author" value="{{ request.session.username }}" required>
+        </div>
+        <div class="form-group form-group-lg ai">
+            <label class="col-sm-2 control-label" for="formGroupInputLarge" >来源:</label>
+            <input class="form-control author-source show2" type="text" id="formGroupInputLarge" placeholder="来源" name="source" maxlength="50">
+            <span class="show_code2 codd"></span>
+        </div>
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="formGroupInputLarge">摘要:</label>
+            <div class="col-sm-10">
+            <input class="form-control show3" type="text" id="formGroupInputLarge" placeholder="摘要内容" name="digest" required maxlength="200">
+                <span class="show_code3 codd"></span>
+            </div>
+        </div>
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="id_image">内容封面:</label>
+            <div class="col-sm-10">
+                <input class="form-control file-img" type="file" id="why" name="image" required onchange="changepic(this)">
+                <img src="{% static 'society/image/addjpg.png' %}" alt="">
+                <img src="" id="show" alt="" width="243px" height="142px">
+                <span class="file-img-font">图片大小不得大于3MB</span>
+            </div>
+        </div>
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="formGroupInputLarge">稿件内容:</label>
+            <div class="col-sm-10">
+                <textarea placeholder="文章主体" name="content" ></textarea>
+            </div>
+        </div>
+    <button type="submit" class="btn btn-primary">发布</button>
+    </form>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'society/js/iss.js' %}"></script>
+    <script src="{% static 'js/textlimit.js' %}"></script>
+    <script src="{% static 'tiny_mce/tiny_mce.js' %}"></script>
+    <script>
+         $('.show1').focus(function () {
+             $('.codd').html('');
+             $(this).textlimit('.show_code1', 50);
+         });
+
+         $('.show2').focus(function () {
+             $('.codd').html('');
+             $(this).textlimit('.show_code2', 50)
+         });
+
+         $('.show3').focus(function () {
+             $('.codd').html('');
+             $(this).textlimit('.show_code3', 200)
+         });
+
+          {# 富文本 #}
+         tinyMCE.init({
+             'mode': 'textareas',
+             'theme': 'advanced',
+             'width': 925,
+             'height': 400,
+         });
+         function changepic() {
+            var reads= new FileReader();
+            f=document.getElementById('why').files[0];
+            reads.readAsDataURL(f);
+            reads.onload=function (e) {
+                document.getElementById('show').src=this.result;
+            };
+            var aa=document.getElementById("why").value.toLowerCase().split('.');//以“.”分隔上传文件字符串
+            // var aa=document.form1.userfile.value.toLowerCase().split('.');//以“.”分隔上传文件字符串
+            if(aa[aa.length-1]=='gif'||aa[aa.length-1]=='jpg'||aa[aa.length-1]=='bmp'
+
+            ||aa[aa.length-1]=='png'||aa[aa.length-1]=='jpeg')//判断图片格式
+                {
+                    var imagSize =  document.getElementById("why").files[0].size;
+            alert("图片大小："+imagSize+"B");
+                if(imagSize>1024*1024*3)
+                alert("图片大小在3M以内，为："+imagSize/(1024*1024)+"M");
+                return true;
+                } else {
+                    alert('请选择格式为*.jpg、*.gif、*.bmp、*.png、*.jpeg 的图片');//jpg和jpeg格式是一样的只是系统Windows认jpg，Mac OS认jpeg，
+                    return false;
+                }
+         }
+    </script>
+{% endblock %}

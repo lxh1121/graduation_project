@@ -1,0 +1,89 @@
+{% extends 'society/base2.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/css.css' %}">
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/my_vip.css' %}">
+
+{% endblock %}
+
+{% block title %}
+    我的发布
+{% endblock %}
+
+{% block content %}
+    <div class="head">
+        <div class="find_nav_list">
+            <ul>
+                <li class="find_nav_cur"><a href="{% url 'society:my_iss' 3%}">全部</a></li>
+                <li><a href="{% url 'society:my_iss' 0%}">审核中</a></li>
+                <li><a href="{% url 'society:my_iss' 1%}">审核通过</a></li>
+                <li><a href="{% url 'society:my_iss' 2%}">审核未通过</a></li>
+                <li class="sideline"></li>
+                <li class="sidelineone"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="record">
+        <div class="my-iss-ul">
+            {% for each in contacts%}
+                <a href="{% url 'society:article_deta' each.id %}">
+                <div class="my-iss-li">
+                    <img class="arti-left" src="{% url 'media' each.image %}" alt="">
+                    <div class="arti-cont">
+                        <h4>{{ each.title }}</h4>
+                        <div class="ppp">{{ each.content|safe }}</div>
+                        <div class="arti-cont-div clearf">
+                            <span class="arti-auth">{{ each.pr_user.username }} |</span>&nbsp;<span class="arti-time"> {{ each.distribute_date|date:"Y-m-d"  }}</span>
+                            <div class="arti-share"><img src="{% static 'society/image/k_02.png' %}" alt="">{{ each.share_count }}</div>
+                            <div class="arti-view"><img src="{% static 'society/image/k_03@2x.png' %}" alt="">{{ each.view_count }}</div>
+                        </div>
+                    </div>
+                    <div class="arti-right">
+                        {% if each.status == 2 %}
+                            <img src="{% static 'society/image/wtg.png' %}" alt="">
+                        {% elif each.status == 1 %}
+                            <img src="{% static 'society/image/dsh.png' %}" alt="">
+                        {% elif each.status == 0 %}
+                            <img src="{% static 'society/image/shz.png' %}" alt="">
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+        <nav aria-label="Page navigation">
+          <ul class="pagination pagination-lg">
+              {% if contacts.has_previous %}
+                <li>
+                  <a href="?page={{ contacts.previous_page_number }}" aria-label="Previous" target="_parent">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+              {% endif %}
+
+              {% for pg in contacts.paginator.page_range %}
+                    {% if contacts.number == pg %}
+                        <li class="active"><a href="?page={{ pg }}" target="_parent">{{ pg }}</a></li>
+                    {% else %}
+                        <li><a href="?page={{ pg }}" target="_parent">{{ pg }}</a></li>
+                    {% endif %}
+              {% endfor %}
+              {% if contacts.has_next %}
+                    <li>
+                        <a href="?page={{ contacts.next_page_number }}" aria-label="Next" target="_parent">
+                             <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+              {% endif %}
+          </ul>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'society/js/basetwo/my_vip.js' %}"></script>
+    <script src="{% static 'society/js/basetwo/js.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="93815dae-8ee6-4fd1-9015-efa713d8391d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-122836545">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="24" />
+          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.8" value="8" />
+          <entry key="project.open.time.9" value="6" />
+          <entry key="project.opened" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="27" />
+          <entry key="html" value="57" />
+          <entry key="jpg" value="8" />
+          <entry key="js" value="10" />
+          <entry key="png" value="4" />
+          <entry key="py" value="95" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="27" />
+          <entry key="HTML" value="57" />
+          <entry key="Image" value="12" />
+          <entry key="JavaScript" value="10" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="95" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="1862" />
+          <entry key="dummy" value="1" />
+          <entry key="html" value="3266" />
+          <entry key="js" value="1909" />
+          <entry key="py" value="14934" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="1862" />
+          <entry key="HTML" value="3266" />
+          <entry key="JavaScript" value="1909" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="14934" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
+    <session id="-2116818109">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="28" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="4" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.33" value="2" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="29" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="14" />
+          <entry key="html" value="56" />
+          <entry key="jpg" value="1" />
+          <entry key="js" value="9" />
+          <entry key="png" value="4" />
+          <entry key="py" value="55" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="14" />
+          <entry key="HTML" value="56" />
+          <entry key="Image" value="5" />
+          <entry key="JavaScript" value="9" />
+          <entry key="Python" value="55" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="438" />
+          <entry key="dummy" value="1" />
+          <entry key="html" value="2679" />
+          <entry key="js" value="36" />
+          <entry key="py" value="7122" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="438" />
+          <entry key="HTML" value="2679" />
+          <entry key="JavaScript" value="36" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="7122" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/society/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19197">
+              <caret line="867" column="25" lean-forward="true" selection-start-line="867" selection-start-column="25" selection-end-line="867" selection-end-column="25" />
+              <folding>
+                <element signature="e#2302#2409#0" />
+                <element signature="e#2493#3155#0" />
+                <marker date="1552789632939" expanded="true" signature="6861:6930" ph="..." />
+                <marker date="1552789632939" expanded="true" signature="6964:7141" ph="..." />
+                <marker date="1552789632939" expanded="true" signature="7171:7239" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/society/templates/society/basetwo/new_message.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/admin_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/system-data.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/system-blogrool.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1430">
+              <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/system-blogrool-add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/system-notice.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4394">
+              <caret line="175" column="37" selection-start-line="175" selection-start-column="37" selection-end-line="175" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/society/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="33" column="81" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/society/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1566">
+              <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>status_choice</find>
+      <find>!important</find>
+      <find>td.text-l</find>
+      <find>role-stu</find>
+      <find>head1</find>
+      <find>top_myname</find>
+      <find>page_aduit</find>
+      <find>main</find>
+      <find>bot_left_top</find>
+      <find>news</find>
+      <find>flash-d</find>
+      <find>blog</find>
+      <find>article_shenhe</find>
+      <find>ppp</find>
+      <find>new</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/society/static/society/js/login.js" />
+        <option value="$PROJECT_DIR$/society/templates/society/baseone/forget_pas.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/index.html" />
+        <option value="$PROJECT_DIR$/society/static/society/css/login/login.css" />
+        <option value="$PROJECT_DIR$/society/templates/base2.html" />
+        <option value="$PROJECT_DIR$/static/css/reset.css" />
+        <option value="$PROJECT_DIR$/static/h-ui.admin/css/H-ui.login.css" />
+        <option value="$PROJECT_DIR$/society/form.py" />
+        <option value="$PROJECT_DIR$/society/forms.py" />
+        <option value="$PROJECT_DIR$/society/static/society/css/basetwo/change_pwd.css" />
+        <option value="$PROJECT_DIR$/society/templates/society/basetwo/change_pwd.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/basetwo/change_pwd2.html" />
+        <option value="$PROJECT_DIR$/society/static/society/css/basetwo/keniu_login.css" />
+        <option value="$PROJECT_DIR$/society/templates/society/basetwo/change_data.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/basetwo/my_iss_no.html" />
+        <option value="$PROJECT_DIR$/society/templatetags/poll_extas.py" />
+        <option value="$PROJECT_DIR$/society/templates/society/basetwo/my_score.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/baseone/pay.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/base.html" />
+        <option value="$PROJECT_DIR$/lxh/settings.py" />
+        <option value="$PROJECT_DIR$/society/templates/society/basetwo/my_vip.html" />
+        <option value="$PROJECT_DIR$/society/tools.py" />
+        <option value="$PROJECT_DIR$/society/templates/society/base2.html" />
+        <option value="$PROJECT_DIR$/society/static/society/css/basetwo/base2.css" />
+        <option value="$PROJECT_DIR$/society/templates/society/basetwo/new_message.html" />
+        <option value="$PROJECT_DIR$/society/static/society/css/baseone/iss.css" />
+        <option value="$PROJECT_DIR$/society/templates/society/baseone/iss_content.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/baseone/iss_success.html" />
+        <option value="G:/Rock_project/trade/views.py" />
+        <option value="$PROJECT_DIR$/society/static/society/css/ba1_title.css" />
+        <option value="$PROJECT_DIR$/society/templates/society/basethree/article_deta.html" />
+        <option value="$PROJECT_DIR$/society/static/society/css/basethree/arti_detail.css" />
+        <option value="$PROJECT_DIR$/society/templates/society/basetwo/my_iss.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/basethree/base3.html" />
+        <option value="$PROJECT_DIR$/society/static/society/js/basethree/main.js" />
+        <option value="$PROJECT_DIR$/society/templates/society/backstage/category-list.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/baseone/login.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/baseone/register.html" />
+        <option value="$PROJECT_DIR$/society/static/society/css/main.css" />
+        <option value="$PROJECT_DIR$/society/templates/society/main.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/basethree/main_type.html" />
+        <option value="$PROJECT_DIR$/society/models.py" />
+        <option value="$PROJECT_DIR$/society/templates/society/baseone/gift_exchange.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/backstage/article-list.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/backstage/admin_index.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/backstage/system-notice.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/backstage/system-data.html" />
+        <option value="$PROJECT_DIR$/society/views.py" />
+        <option value="$PROJECT_DIR$/society/urls.py" />
+        <option value="$PROJECT_DIR$/society/templates/society/backstage/system-blogrool.html" />
+        <option value="$PROJECT_DIR$/society/templates/society/backstage/system-blogrool-add.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="90" />
+    <option name="y" value="34" />
+    <option name="width" value="1427" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Spelling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Python</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="20181024" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="20181216" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="20190316" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="society" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="society" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="society" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="society" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="society" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="society" type="462c0819:PsiDirectoryNode" />
+              <item name="backstage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="society" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="society" type="462c0819:PsiDirectoryNode" />
+              <item name="basetwo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lxh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lxh" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Rock/Rock_project" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\qycode\start7-16\lxh\society\templates\society\backstage" />
+      <recent name="D:\qycode\start7-16\lxh\society\static\society\image" />
+      <recent name="D:\qycode\start7-16\lxh\society\static\society\css\basethree" />
+      <recent name="D:\qycode\start7-16\lxh\static\js" />
+      <recent name="D:\qycode\start7-16\lxh\society\static\society\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\qycode\start7-16\lxh\society\static\society\css\basethree" />
+      <recent name="D:\qycode\start7-16\lxh\society\static\society\css\baseone" />
+      <recent name="C:\Users\Administrator\Desktop\qycode\start7-16\lxh\society\static\society\image" />
+      <recent name="C:\Users\Administrator\Desktop\qycode\start7-16\lxh\society\templates\society" />
+      <recent name="C:\Users\Administrator\Desktop\qycode\start7-16\lxh\static\image" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="lxh" type="Python.DjangoServer" factoryName="Django server">
+      <module name="lxh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93815dae-8ee6-4fd1-9015-efa713d8391d" name="Default Changelist" comment="" />
+      <created>1542108404776</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542108404776</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="90" y="34" width="1427" height="1047" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1886249" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008606" side_tool="true" weight="0.22392975" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49913943" visible="true" weight="0.22672509" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32857144" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3294539" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14035088" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008606" side_tool="true" weight="0.22392975" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49913943" visible="true" weight="0.28587076" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32857144" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3294539" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/society/urls.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/society/templates/society/baseone/iss_success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Rock_project/trade/views.py" />
+    <entry file="file://$PROJECT_DIR$/society/static/society/css/baseone/iss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1716">
+          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/static/society/css/ba1_title.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/base2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/static/society/css/basetwo/base2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templatetags/poll_extras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lxh/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/static/society/js/basethree/deta_share.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/static/society/css/basethree/arti_detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/baseone/iss_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="48" column="72" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/basethree/base3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/basetwo/my_iss.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="39" column="93" lean-forward="true" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/basethree/article_deta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/category-change.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/migrations/0013_article_share_count.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0012_auto_20190214_1508.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0011_principal_user_code.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0010_bill_consume.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0009_auto_20190211_1025.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0008_principal_score.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0007_auto_20190210_2155.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0006_auto_20181124_0913.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0005_auto_20181124_0853.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0004_corporate.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0003_auto_20181116_2128.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0002_auto_20181116_1915.py" />
+    <entry file="file://$PROJECT_DIR$/society/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/baseone/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="96" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/static/society/image/1540720317078.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/static/society/image/addjpg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/basethree/main_type.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/20181216/15427797351.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/static/society/js/basethree/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/baseone/gift_exchange.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1352">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1274">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1118">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/static/society/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5148">
+          <caret line="198" column="17" selection-start-line="198" selection-start-column="17" selection-end-line="198" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/baseone/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="27" column="153" selection-start-line="27" selection-start-column="153" selection-end-line="27" selection-end-column="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lxh/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/article-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="73" selection-start-line="73" selection-end-line="81" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/system-data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/system-notice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4394">
+          <caret line="175" column="37" selection-start-line="175" selection-start-column="37" selection-end-line="175" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/category-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="33" column="81" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/system-blogrool.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1430">
+          <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/system-blogrool-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1566">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/basetwo/new_message.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19197">
+          <caret line="867" column="25" lean-forward="true" selection-start-line="867" selection-start-column="25" selection-end-line="867" selection-end-column="25" />
+          <folding>
+            <element signature="e#2302#2409#0" />
+            <element signature="e#2493#3155#0" />
+            <marker date="1552789632939" expanded="true" signature="6861:6930" ph="..." />
+            <marker date="1552789632939" expanded="true" signature="6964:7141" ph="..." />
+            <marker date="1552789632939" expanded="true" signature="7171:7239" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/society/templates/society/backstage/admin_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

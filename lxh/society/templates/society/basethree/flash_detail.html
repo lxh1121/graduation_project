@@ -1,0 +1,42 @@
+{% extends 'news/basethree/base3.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'news/css/basethree/flash.css' %}">
+{% endblock %}
+
+{% block title %}
+     <div>
+         <div class="title1_left_point one-point"></div>
+         <span>快讯</span>
+     </div>
+     <div class="now">{% now "Y-m-d" %} 星期{{ now_we }}</div>
+{% endblock %}
+
+{% block flash_xq %}
+    <div class="clearfix fl-deta">
+        <span class="hidde">{{ fldate.id }}</span>
+        <div class="fl-deta-title">
+            <div class="flde-blue">{% now 'H:i' %}</div>
+            <div class="fl-deta-ablack">
+               {{ fldate.title }}
+            </div>
+        </div>
+        <div class="fl-deta-text">
+            {{ fldate.digest }}
+        </div>
+        <div class="fl-deta-div">
+            <div class="fl-share">
+                <img src="{% static 'news/img/k_03@2x.png' %}" alt=""> {{ fldate.view_count }}
+            </div>
+            <div class="fl-view share">
+                <img src="{% static 'news/img/k_03.png' %}" alt="">
+                <span class="kiss share-span"> 分享</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'news/js/basethree/deta_share.js' %}"></script>
+{% endblock %}

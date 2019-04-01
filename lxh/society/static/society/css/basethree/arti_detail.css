@@ -1,0 +1,182 @@
+.ba_left_bot {
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+h2 {
+    margin-bottom: 35px;
+    font-size: 30px;
+    color: #2C323E;
+    letter-spacing: 1px;
+    line-height: 26px;
+}
+
+.arti-cont-div {
+    font-family: PingFangSC-Semibold;
+    /*font-size: 18px;*/
+    color: #888888;
+    letter-spacing: 1px;
+}
+
+.arti-cont-div img {
+    width: 20px;
+    height: 20px;
+}
+
+.arti-auth {
+    float: left;
+    font-weight: bold;
+    color: #1992EF;
+    letter-spacing: 0.54px;
+    line-height: 22px;
+}
+
+.arti-share, .arti-view {
+    float: right;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+}
+
+.ba_left_bot > hr {
+    height: 1px;
+    background: #EEEEEE;
+    margin: 30px 0;
+
+}
+
+.digst {
+    background: #F9FAFD;
+    color: #838484;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 20px 0;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #001400;
+}
+
+.gray {
+    font-size: 16px;
+    color: #838484;
+    letter-spacing: 0.68px;
+    display: block;
+    margin-top: 10px;
+}
+
+.statement {
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #888888;
+    letter-spacing: 0.88px;
+    box-sizing: border-box;
+    padding: 10px 65px 10px 16px;
+    margin: 30px 0 45px;
+}
+
+.votes {
+    margin-left: 32%;
+    margin-right: 80px;
+    height: 44px;
+    border: 1px solid #C6C6C6;
+    border-radius: 85px;
+}
+
+.share:hover {
+    color: #3F7ADC;
+}
+
+.votes, .share {
+    position: relative;
+    display: inline-block;
+}
+
+.votes-span {
+    position: absolute;
+    left: 79px;
+    top: 10px;
+}
+
+.share-span {
+    position: absolute;
+    left: 55px;
+    top: 10px;
+    color: #2979FF;
+}
+
+.btn-blue {
+    border: 1px solid darkturquoise;
+    border-radius: 85px;
+    background: dodgerblue;
+}
+
+.hidde {
+    display: none;
+}
+
+.comment {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid white;
+    float: right;
+    margin-top: 4px;
+    background: slategrey;
+    color: whitesmoke;
+    font-weight: bold;
+    outline: none;
+}
+
+.comm-btn {
+    border-color: deepskyblue;
+    background: black;
+    opacity: 0.7;
+}
+
+.com-anima {
+    background: #48D1CC;
+    width: 400px;
+    height: 600px;
+    border-radius: 55px;
+    box-sizing: border-box;
+    padding: 55px 15px 0;
+    padding-left: 40px;
+    opacity: 0.9;
+    position: absolute;
+    top: 410px;
+    left: 1081px;
+    display: none;
+}
+
+.anima-input {
+    width: 94%;
+    height: 90px;
+    margin-bottom: 15px;
+}
+
+.anima-btn, .off {
+    width: 120px;
+    height: 40px;
+    margin-left: 25px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+
+.com-anima > img {
+    width: 320px;
+    height: 300px;
+    margin-bottom: 25px;
+}
+
+.show_code {
+    display: block;
+}

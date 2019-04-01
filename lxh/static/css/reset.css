@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover, a:active, a:visited, a:link {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+.clear {
+	zoom: 1;
+}
+
+.clearf::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body {
+    min-width: 1750px;
+}

@@ -1,0 +1,116 @@
+
+.col-md-8, .col-md-7, .col-md-10 {
+    margin-bottom: 16px;
+}
+
+.col-md-10 > input {
+    display: inline-block;
+    width: 498.65px;
+}
+
+.pri-check input, .stu-check input,.role p {
+    height: 55px;
+}
+
+.stu_login_error .role p {
+    height: 59px;
+}
+
+.tm-btn-subscribe {
+    width: 500px;
+}
+
+.role-stu, .role-sele {
+    color: #FFFFFF;
+    border-radius: .5rem;
+    border: 1px solid #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: 0.75rem 1.2rem;
+    background: transparent;
+    width: 200px;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.role  img {
+    margin-left: -47px;
+    margin-top: -3px;
+}
+
+.role-sele {
+    display: none;
+    width: 210px;
+    position: absolute;
+    padding: 0;
+    z-index: 2;
+}
+
+.role-sele > div {
+    padding: 5px 1.2rem;
+}
+
+.role-sele > div:hover {
+    color: black;
+    background: #FFFFFF;
+    cursor: default;
+}
+
+.mohu {
+    filter: blur(2px);
+}
+
+#login {
+    letter-spacing: 4px;
+}
+
+.forget-pass {
+    float:right;
+}
+
+/*忘记密码，记住密码*/
+.forget-pass>a, .forget-pass2>a, .check-pas {
+    font-size: 16px;
+}
+
+.check1, .check2 {
+    margin-bottom: 5px;
+}
+
+.check2 {
+    padding-right: 20px;
+}
+
+.check-pas {
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.check-pas1 {
+    width: 30px;
+    height: 15px;
+    vertical-align: middle;
+}
+
+.re-code > input {
+    width: 200px;
+    display: inline-block;
+}
+
+.btn-code {
+    display: inline-block;
+    float: right;
+    width: 160px;
+}
+
+.pri-check {
+    display: none;
+}
+
+.red {
+    font-size: 14px;
+    color: orangered;
+    font-weight: bolder;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'society/css/main.css' %}">
+    </head>
+    <body>
+        {% for article in articles %}
+        <a href="">
+            <div class="my-iss-li main-list">
+                <img class="arti-left" src="/media/{{ article.image }}" alt="">
+                <div class="arti-cont">
+                    <h4>{{ article.title }}</h4>
+                    <div class="ppp">{{ article.content|slice:":45"|safe }}</div>
+                    <div class="arti-cont-div clearf kenga">
+                        <span class="arti-auth">{{ article.pr_user.username }} |</span>&nbsp;<span class="arti-time"> {{ article.distribute_date|date:"Y-m-d"  }}</span>
+                        <div class="arti-share"><img src="{% static 'society/image/k_03@2x.png' %}" alt="">{{ article.view_count }}</div>
+                        <div class="arti-view"><img src="{% static 'society/image/k_02.png' %}" alt="">{{ article.share_count }}</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+        <button class="loding lod-many1">
+            {% if no_many == 'aaa' %}
+                加载更多
+            {% else %}
+                没有更多新闻了0~0
+            {% endif %}
+        </button>
+    </body>
+</html>
+<script src="{% static 'scoiety/js/jq3.js' %}"></script>
+<script>
+     cb = 0;
+    $('.lod-many1').click(function () {
+        $('.ba_left_bot').html('');
+        type_a = $('.black').attr('ca');
+        console.log(type_a);
+        cb = cb + 1;
+        $.ajax({
+            url: "{% url 'society:main' %}/" + type_a + "?cb=" + cb,
+            dataType: 'html',
+            success: function(html) {
+                $('.ba_left_bot').html(html);
+            },
+        })
+    });
+</script>
+

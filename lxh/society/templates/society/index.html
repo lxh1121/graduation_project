@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>xh ---欢迎您</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="/static/tpmo_login/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/tpmo_login/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/static/tpmo_login/css/demo.css" />
+  <link rel="stylesheet" href="/static/tpmo_login/css/templatemo-style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/login/login.css' %}">
+    {% block css %}
+    {% endblock %}
+  <script type="text/javascript" src="/static/tpmo_login/js/modernizr.custom.86080.js"></script>
+    <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+	</head>
+	<body>
+			<div id="particles-js"><a href="{% url 'society:main' %}"><img src="{% static '/image/logo.png' %}" alt="" style="width: 270px;height: 80px"></a></div>
+			<ul class="cb-slideshow">
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	        </ul>
+
+			<div class="container-fluid">
+				<div class="row cb-slideshow-text-container ">
+					<div class= "tm-content col-xl-5 col-sm-8 col-xs-8 ml-auto section">
+					{% block content %}
+                        {% endblock %}
+				    </div>
+				    <div class="footer-link">
+					<p>Copyright © 2018-11-13 lxh
+
+                    - Design: <a rel="nofollow" href="#" target="_parent">society 毕业设计</a></p>
+                    <p>More splendid <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">平院3504</a> - from my <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">one month</a></p>
+				</div>
+			    </div>
+            </div>
+	</body>
+
+	<script type="text/javascript" src="/static/tpmo_login/js/particles.js"></script>
+	<script type="text/javascript" src="/static/tpmo_login/js/app.js"></script>
+</html>
+{% block js %}
+{% endblock %}
+<script src="{% static 'society/js/login.js' %}"></script>

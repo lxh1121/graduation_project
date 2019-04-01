@@ -1,0 +1,78 @@
+/* 修改资料 */
+
+.logform {
+    margin-top: 8%;
+}
+
+.logform .form-control{
+    width: 65%;
+    height: 40px;
+}
+
+label {
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: 1.08px;
+}
+
+.form-group > input {
+    display: inline-block;
+    margin-bottom: 5.3%;
+    margin-left: 3%;
+}
+
+.left_label>label {
+    margin-left: 2.4%;
+}
+
+.btn-default {
+    width: 30%;
+    height: 50px;
+    background: #1992EF;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1.33px;
+    margin-left: 11%;
+}
+
+.err {
+    color: red;
+}
+
+/* 头像修改 */
+.head-zo {
+    position: absolute;
+    margin: -1.4% 0 2% 3%;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.head-img {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.head-file {
+    opacity: 0;
+    z-index: 10;
+}
+
+.opcity {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    opacity: 0.5;
+    background: #000000;
+    display: inline-block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding-top: 27px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 1.1px;
+    font-weight: bold;
+}

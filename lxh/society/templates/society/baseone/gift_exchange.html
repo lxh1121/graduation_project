@@ -1,0 +1,69 @@
+{% extends 'society/base.html' %}
+
+{% block style %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/ba1_title.css' %}">
+    <link rel="stylesheet" href="{% static 'society/css/base2.css' %}">
+    <link rel="stylesheet" href="{% static 'society/css/baseone/pay.css' %}">
+{% endblock %}
+
+{% block head %}
+    <button class="fbcontent clear" ><a href="{% url 'society:iss_cont' %}" class="iss">发布内容</a></button>
+    <a href="{% url 'society:change_data' %}"><img src="{% url 'media' request.session.photo %}" alt="" width="35px" height="35px"></a>
+{% endblock %}
+
+{% block usname %}
+    积分兑换会员
+{% endblock %}
+
+{% block content %}
+    <form class="iss-success" action="{% url 'society:gift_ex' %}" method="post">
+        {% csrf_token %}
+        <div class="pay-top pay">
+            <p>支付积分：<span class="blue pay-money">200</span> <span class="gray">原VIP{{ request.session.vip }}级抵扣0</span> </p>
+        </div>
+        <div class="level pay">
+            <h4>选择购买方式</h4>
+            <div class="level-bot">
+                <div class="level-bot-div">
+                  <input type="radio" name="score" checked value="2" class="pay-input">
+                    <div>
+                        <img src="{% static 'society/image/v1.png' %}" alt="">
+                        <div class="wenzi">
+                            <span class="blue f-sma">200积分</span>
+                            <div class="gray">每个月可免费发布2条新闻</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-bot-div">
+                    <input type="radio" name="score" value="5" class="pay-input">
+                   <div >
+                    <img src="{% static 'society/image/v2.png' %}" alt="">
+                    <div class="wenzi">
+                        <span class="blue f-sma">500积分</span>
+                        <div class="gray">每个月可免费发布5条新闻</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="level-bot-div">
+                    <input type="radio" name="score"  value="10" class="pay-input">
+                    <div>
+                        <img src="{% static 'society/image/v3.png' %}" alt="">
+                        <div class="wenzi">
+                            <span class="blue f-sma">1000积分</span>
+                            <div class="gray">每个月可免费发布10条新闻</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="alert-pay">{{ error }}</span>
+        </div>
+        <button type="submit" class="btn btn-succ">确认支付</button>
+    </form>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'society/js/iss.js' %}"></script>
+{% endblock %}
+

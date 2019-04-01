@@ -1,0 +1,31 @@
+{% extends 'society/base2.html' %}
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/keniu_login.css' %}">
+     <link rel="stylesheet" href="{% static 'society/css/basetwo/change_pwd.css' %}">
+{% endblock %}
+
+{% block title %}
+    修改密码
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'society:change_pwd' %}" method="post" class="regform forgetform phoneform">
+        {% csrf_token %}
+        <div class="form-group phone-note">
+{#            {{ form.phone_num }}#}
+            <input type="text" maxlength="11" placeholder="请输入手机号" class="form-control" name="phone" value="{{ phone }}" required>
+            <span class="err err-note">{{ error1 }}</span>
+            <span class="err">{{ error2 }}</span>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="请输入原始密码" class="form-control" name="old_pwd" value="{{ old_pwd }}" required>
+            <span class="err">{{ error3 }}</span>
+        </div>
+        <button type="submit" class="btn btn-default">下一步</button>
+    </form>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'society/js/basetwo/change_pwd.js' %}"></script>
+{% endblock %}

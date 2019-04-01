@@ -1,0 +1,45 @@
+{% extends 'news/basethree/base3.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'news/css/basethree/flash.css' %}">
+{% endblock %}
+{% load poll_extras %}
+{% block title %}
+     <div>
+         <div class="title1_left_point one-point"></div>
+         <span>快讯</span>
+     </div>
+     <div class="now">{% now "Y-m-d" %} 星期六</div>
+{% endblock %}
+
+{% block flash_xq %}
+    {% for flash in flash_list %}
+    <a href="{% url 'news:flash_detail' flash.id %}" class="show">
+        <div class="new-flash clearfix">
+            <div class="flash-title">
+                <div class="blue-point"></div>
+                <span class="ablack">
+                   {{ flash.title }}
+                </span>
+            </div>
+            <div class="flash-txt">
+               {{ flash.digest }}
+            </div>
+            <div class="arti-cont-div clearf  flash-div">
+                <span class="arti-time">{{ flash.distribute_date|minus }}</span>
+                <div class="arti-view">
+                    <img src="{% static 'news/img/k_03.png' %}" alt="">
+                    <span class="kiss">分享</span>
+                </div>
+                <div class="arti-share">
+                    <img src="{% static 'news/img/k_03@2x.png' %}" alt="">{{ flash.view_count }}
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+{% endblock %}
+
+{% block js %} {% endblock %}
+

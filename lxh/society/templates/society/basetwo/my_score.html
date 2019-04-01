@@ -1,0 +1,78 @@
+{% extends 'society/base2.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/my_vip.css' %}">
+{% endblock %}
+
+{% block title %}
+    我的积分
+{% endblock %}
+
+{% block content %}
+    <div class="head">
+        <div class="vip-p">当前剩余积分：<span class="blue f-big">{{ request.session.score }}</span></div>
+        <a href="{% url 'society:gift_ex' %}"><button class="vip-btn">兑换会员</button></a>
+    </div>
+    <hr>
+    <div class="level dropdown">
+        <div class="level-top">
+            <div class="title1_left_point">
+            </div>
+            <span class="ba_title">积分说明</span>
+            <span class="glyphicon glyphicon-triangle-right"></span>
+        </div>
+        <div class="level-bot level-bot-p">
+            本积分与cny兑换比例为10:1cny。可与人棉币做等值兑换。<br>
+            用户每分享一次新闻给好友，只有 好友允许获取微信openID并打开。即可获取1积分。最多5积分。同一个新闻每个用户第一次阅读有效...
+        </div>
+    </div>
+    <hr>
+    <div class="record">
+        <div>
+            <div class="title1_left_point">
+            </div>
+            <span class="ba_title">积分账单</span>
+        </div>
+        <ul class="record-ul">
+            {% for each in contacts %}
+            <li class="record-li">
+                <span class="record-span1">{{ each.title }}</span>
+                <span class="record-span2">{{ each.score }}</span>
+                <span class="record-span3">{{ each.cost_date|date:"Y-m-d H:i" }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <nav aria-label="Page navigation">
+          <ul class="pagination pagination-lg">
+              {% if contacts.has_previous %}
+                <li>
+                  <a href="?page={{ contacts.previous_page_number }}" aria-label="Previous" target="_parent">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+              {% endif %}
+
+              {% for pg in contacts.paginator.page_range %}
+                    {% if contacts.number == pg %}
+                        <li class="active"><a href="?page={{ pg }}" target="_parent">{{ pg }}</a></li>
+                    {% else %}
+                        <li><a href="?page={{ pg }}" target="_parent">{{ pg }}</a></li>
+                    {% endif %}
+              {% endfor %}
+              {% if contacts.has_next %}
+                    <li>
+                        <a href="?page={{ contacts.next_page_number }}" aria-label="Next" target="_parent">
+                             <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+              {% endif %}
+          </ul>
+    </nav>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'society/js/basetwo/my_vip.js' %}"></script>
+{% endblock %}

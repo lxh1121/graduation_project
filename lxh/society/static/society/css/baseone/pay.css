@@ -1,0 +1,112 @@
+.btn-succ {
+    background: #1992EF;
+    border-radius: 4px;
+    width: 18%;
+    height: 44px;
+    margin-left: 4.3%;
+    margin-top: 14%;
+    color: white;
+}
+
+.level-bot, .level-bot>div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.level-bot-div {
+    display: flex;
+    padding: 1% 2%;
+}
+
+.level-bot-div > div {
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+    display: flex;
+    padding: 2% 1% 1% 2%;
+}
+
+.level-bot-div:nth-child(1) > div {
+    border: 2px solid #1992EF;
+}
+
+.level-bot .pay-img {
+    width: 16%;
+    padding: 1% 0 1% 1%;
+    border: 2px solid #D9D9D9;
+    margin: 1% 1.9%;
+    border-radius: 8px;
+}
+
+.level .level-bot .gray {
+    font-size: 14px;
+    color: #878787;
+    letter-spacing: 0.88px;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+h4 {
+    font-size: 18px;
+    color: #2C323E;
+    letter-spacing: 0.7px;
+    font-weight: bold;
+}
+
+.wenzi {
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.f-sma {
+    font-size: 18px;
+    letter-spacing: 1.12px;
+    font-weight: bold;
+}
+
+.pay {
+    margin: 3% 2%;
+}
+
+.blue {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+}
+
+.gray {
+    color: #A8A8A8;
+    letter-spacing: 1.12px;
+}
+
+.pay-top {
+    margin-top: 2%;
+    background: #F9FAFD;
+    font-size: 20px;
+    color: #5D5F62;
+    letter-spacing: 1.12px;
+    padding: 1.8% 2.4% 1%;
+}
+
+.pay-input {
+    width: 13%;
+    height: 90px;
+    opacity: 0;
+    position: absolute;
+}
+
+.pay-name {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    margin-left: -450px;
+    opacity: 0;
+}
+
+.pay-img:nth-child(1) {
+     border: 2px solid #1992EF;
+}
+
+.alert-pay {
+    color: red;
+    font-size: 18px;
+    display: none;
+}

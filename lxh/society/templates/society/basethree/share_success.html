@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        {% load static %}
+    </head>
+    <body>
+        <form action="{% url 'news:share_success' %}" method="post">
+            {% csrf_token %}
+            <h4>是否返回原网页？</h4>
+            <input type="hidden" name="hehe" value={{ id }}>
+            <input type="hidden" name="sele" class="xz">
+            <input type="submit" class="btn1" value="是">
+            <input  type="submit" class="btn1" value="否">
+        </form>
+    </body>
+</html>
+<script src="{% static 'news/js/jq3.js' %}"></script>
+<script src="{% static 'news/js/basethree/deta_share.js' %}"></script>
+<script>
+    $('.btn1').click(function () {
+        $('.xz').val($(this).attr('value'));
+        console.log($(this).attr('value'));
+    })
+</script>

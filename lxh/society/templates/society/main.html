@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>最后一步不不不</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/swiper-4.3.5.min.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/ba1_title.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/main.css' %}">
+    </head>
+    <body>
+        {% load poll_extras %}
+        <div class="ba1_head">
+            <div class="head1_left clear">
+                <a href="{% url 'society:main' %}"><img src="{% static 'image/logo.png' %}" alt=""></a>
+            </div>
+            <div class="head1_right">
+                {% if request.session.user_code == '1' %}
+                <button class="fbcontent clear" ><a href="{% url 'society:iss_cont' %}" class="iss">发布内容</a></button>
+                {% elif request.session.user_code == '0' %}
+                <button class="fbcontent clear" ><a href="{% url 'society:logout' %}" class="iss">退出登录</a></button>
+                {% else %}
+                <button class="fbcontent clear" ><a href="{% url 'society:login' %}" class="iss">马上登录</a></button>
+                {% endif %}
+                {% if 'photo' in request.session %}
+                <a href="{% url 'society:change_data' %}"><img src="{% url 'media' request.session.photo %}" alt="" width="35px" height="35px" class="base-head-img"></a>
+                {% else %}
+                    <a href="{% url 'society:login' %}"><img src="{% url 'media' '20181024/07.jpg' %}" alt="" width="35px" height="35px" class="base-head-img"></a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="ba_left">
+            <div class="ba_left_top clearf">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="{% static 'society/image/u211.jpg' %}" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'society/image/u210.jpg' %}" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'society/image/lbyt.png' %}" alt=""></div>
+                        <div class="swiper-slide"><img src="{% static 'society/image/u211.jpg' %}" alt=""></div>
+                    </div>
+                <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+		        </div>
+                <img src="{% static 'society/image/u121.png' %}" alt="" class="ba_left_img1">
+                <img src="{% static 'society/image/u999.png' %}" alt="" class="ba_left_img2">
+            </div>
+            <div class="ba_left_navga">
+                <div class="point-categ {% if category == '1' %}black{% endif %}" href="{% url 'society:main_type' 1%}" ca=1>
+                    <div class="title1_left_point {% if category == '1' %}one-point{% endif %}"></div>
+                    <span>服务</span>
+                </div>
+                <div class="point-categ {% if category == '2' %}black{% endif %}" href="{% url 'society:main_type' 2%}" ca=2>
+                    <div class="title1_left_point {% if category == '2' %}one-point{% endif %}"></div>
+                    <span>文艺</span>
+                </div>
+                <div class="point-categ {% if category == '3' %}black{% endif %}" href="{% url 'society:main_type' 3%}" ca=3>
+                    <div class="title1_left_point {% if category == '3' %}one-point{% endif %}"></div>
+                    <span>体能</span>
+                </div>
+                <div class="point-categ {% if category == '4' %}black{% endif %}" href="{% url 'society:main_type' 4%}" ca=4>
+                    <div class="title1_left_point {% if category == '4' %}one-point{% endif %}"></div>
+                    <span>宗教</span>
+                </div>
+                <div class="point-categ new-add1 {% if category == '5' %}black{% endif %}" href="{% url 'society:main_type' 5%}" ca=5>
+                    <div class="title1_left_point {% if category == '5' %}one-point{% endif %}"></div>
+                    <span>理论研究</span>
+                </div>
+                <div class="point-categ new-add2 {% if category == '6' %}black{% endif %}" href="{% url 'society:main_type' 6%}" ca=6>
+                    <div class="title1_left_point {% if category == '6' %}one-point{% endif %}"></div>
+                    <span>专业科技</span>
+                </div>
+            </div>
+            <div class="ba_left_bot">
+                {% for article in articles %}
+                <a href="{% url 'society:article_deta' article.id %}">
+                    <div class="my-iss-li main-list">
+                        <img class="arti-left" src="{% url 'media' article.image %}" alt="">
+                        <div class="arti-cont">
+                            <h4>{{ article.title }}</h4>
+                            <div class="ppp">{{ article.content|slice:":40"|safe }}</div>
+                            <div class="arti-cont-div clearf kenga">
+                                <span class="arti-auth">{{ article.pr_user.username }} |</span>&nbsp;<span class="arti-time"> {{ article.distribute_date|date:"Y-m-d"  }}</span>
+                                <div class="arti-share"><img src="{% static 'society/image/k_03@2x.png' %}" alt="">{{ article.view_count }}</div>
+                                <div class="arti-view"><img src="{% static 'society/image/k_02.png' %}" alt="">{{ article.share_count }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+                <button class="loding lod-many1">加载更多</button>
+            </div>
+        </div>
+
+        <div class="ba_right">
+            <div class="ba_right_top">
+                <h4>快讯</h4>
+                {% for fldate in flash_list %}
+                <div class="new-flash">
+                    <div class="flash-title" href="">
+                        <img src="{% static 'society/image/b_n.png' %}" alt="" class="flash-img">
+                        <span><a href="{% url 'society:flash_detail' fldate.id %}" class="ablack">{{ fldate.title }}</a></span>
+                    </div>
+                    <div class="flash-txt">
+                        {{ fldate.digest }}
+                    </div>
+                    <div class="arti-cont-div clearf  flash-div">
+                        <span class="arti-time">{{ fldate.distribute_date|minus }}</span>
+                        <div class="arti-view">
+                            <img src="{% static 'society/image/k_03.png' %}" alt="">
+                            <a href="" class="kiss" style="font-size:13px;color: #5D5F62">分享</a>
+                        </div>
+                        <div class="arti-share">
+                            <img src="{% static 'society/image/k_03@2x.png' %}" alt="">{{ fldate.share_count }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <a href="{% url 'society:flash' %}"><button class="loding but-infor lod-many2">查看更多资讯</button></a>
+            </div>
+            <div class="ba_right_bot">
+                <h4>热门新闻</h4>
+                <div class="right_bot_hot">
+                    <img src="{% static 'society/image/lbyt.png' %}" alt="">
+                    <div class="regis">去香港，打打底裤</div>
+                </div>
+                {% for hotnew in hotnew_list %}
+                    <a href="{% url 'society:article_deta' hotnew.id %}">
+                        <div class="right_bot_json clearf">
+                            <img src="{% url 'media' hotnew.image %}" alt="">
+                            <div class="right_json_div">
+                                <div class="ppp" id="ppp">{{ hotnew.content|safe }}</div>
+                                <div class="arti-cont-div time-span">
+                                    <span>{{ hotnew.distribute_date|date:'Y-m-d' }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+
+        </div>
+    </body>
+</html>
+<script src="{% static 'society/js/jq3.js' %}"></script>
+<script src="{% static 'js/swiper-4.3.5.min.js' %}"></script>
+<script src="{% static 'society/js/basethree/main.js' %}"></script>
+<script>
+  	var mySwiper = new Swiper ('.swiper-container', {
+  			// horizontal 水平方向
+  			// vertical 设置为垂直方向
+    		direction: 'horizontal',
+    		loop: true,
+            autoplay: true,
+
+    	// 如果需要分页器
+    	pagination: {
+      		el: '.swiper-pagination',
+   		},
+
+	    // 如果需要前进后退按钮
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+
+  	});
+    cb = 0;
+    $('.lod-many1').click(function () {
+        $('.ba_left_bot').html('');
+        type_a = $('.black').attr('ca');
+        cb = cb + 1;
+        $.ajax({
+            url: "{% url 'society:main' %}/" + type_a + "?cb=" + cb,
+            dataType: 'html',
+            success: function(html) {
+                $('.ba_left_bot').html(html);
+            },
+        })
+    });
+
+    $('#ppp>p').css({'margin-top': '0px'});
+</script>

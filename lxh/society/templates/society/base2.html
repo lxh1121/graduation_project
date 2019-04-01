@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css' %}">
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/ba1_title.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/basetwo/base2.css' %}">
+        {% block css %}{% endblock %}
+    </head>
+    <body>
+        <div class="ba1_head">
+            <div class="head1_left clear">
+                <a href="{% url 'society:main' %}"><img src="{% static 'image/logo.png' %}" alt=""></a>
+            </div>
+            <div class="head1_right">
+ <!--<button class="fbcontent clear" ><a href="" class="iss">退出登录</a></button>-->
+                {% if request.session.user_code == '1' %}
+                    <button class="fbcontent clear" ><a href="{% url 'society:iss_cont' %}" class="iss">发布内容</a></button>
+                {% else %} {% endif %}
+                <a href="{% url 'society:change_data' %}"><img src="{% url 'media' request.session.photo %}" alt="" width="44px" height="42px" class="base-head-img"></a>
+
+            </div>
+        </div>
+
+        <div class="ba_left">
+            <div class="head_por">
+                <div class="head_por_top">
+                    <img src="{% url 'media' request.session.photo %}" alt="" width="72px" height="72px" class="base-head-img">
+                        <div class="top_myname">
+                        <span class="myname">{{ request.session.username }}</span></div>
+                </div>
+                <div class="head_por_bot">
+                    <div class="bot_left">
+                        <div class="bot_left_top">
+                            剩余积分
+                        </div>
+                        <span class="bot_left_bot">
+                            {{ request.session.score }}
+                        </span>
+                    </div>
+                    <div class="bot_cent">
+                    </div>
+                    <div class="bot_right">
+                        <div class="bot_right_top">
+                            剩余发布次数
+                        </div>
+                        <span class="bot_right_bot">
+                            {{ request.session.leave_count }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-bar">
+                <ul class="nav nav-pills nav-stacked">
+                  <li role="presentation" class="vip1">
+                      <a href="{% url 'society:my_vip' %}">
+                          <img src="{% static 'society/image/my_vip.png' %}" alt="">
+                          <span class="fun_name">我的会员</span>
+                      </a>
+                  </li>
+                    <li role="presentation" class="vip1">
+                      <a href="{% url 'society:my_score' %}">
+                          <img src="{% static 'society/image/my_jf.png' %}" alt="">
+                          <span class="fun_name">我的积分</span>
+                      </a>
+                  </li>
+                  <!--<li role="presentation"><a href="{% url 'society:iss_cont' %}"><img src="{% static 'society/image/post_n.png' %}" alt=""> <span class="fun_name">发布内容</span></a></li>-->
+                  <li role="presentation" ><a href="{% url 'society:my_iss' 3%}"><img src="{% static 'society/image/post_n.png' %}" alt=""> <span class="fun_name">我的发布</span></a></li>
+                  <li role="presentation"><a href="{% url 'society:new_message' %}"><img src="{% static 'society/image/xxx_n.png' %}" alt=""> <span class="fun_name">消息通知</span></a></li>
+                  <li role="presentation" class="dropdown clear">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                          <img src="{% static 'society/image/sz.png' %}" alt=""> <span class="fun_name">设&nbsp;&nbsp;&nbsp;置</span> <img src="{% static 'society/image/xia.png' %}" class="xia">
+                      </a>
+                       <ul class="dropdown-menu">
+                          <li role="presentation"><a href="{% url 'society:change_data' %}">个人资料</a></li>
+                           <li role="presentation"><a href="{% url 'society:change_pwd' %}">修改密码</a></li>
+                           <li role="presentation"><a href="{% url 'society:logout' %}">退出登录</a></li>
+                       </ul>
+                  </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ba_right">
+            <div class="ba_right_title">
+                <div class="title1_left_point">
+                </div>
+                <span class="ba_title">
+                    {% block title%}
+                        欢迎
+                    {% endblock %}
+                </span>
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
+<script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+<script type="text/javascript" color="112,128,144" opacity='3' zIndex="-10" count="123" src="http://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+{% block js %}
+{#    <script src="{% static 'news/js/login.js' %}"></script>#}
+    <script>
+        {% if messages %}
+            {% for message in messages %}
+                alert({{ message }});
+            {% endfor %}
+        {% endif %}
+    </script>
+{% endblock %}

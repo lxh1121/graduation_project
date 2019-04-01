@@ -1,0 +1,213 @@
+
+.form-control {
+    width: 60%;
+    background: #F9FAFD;
+}
+
+.iss_cont {
+    padding-top: 5%;
+}
+
+.form-horizontal .form-group {
+    margin-bottom: 2%;
+}
+
+.col-sm-2 {
+    width: 15%;
+    color: #333333;
+    letter-spacing: 1.08px;
+    font-weight: normal;
+    font-family: PingFangSC-Regular;
+
+}
+
+.form-iss input {
+    margin: 0 1%;
+    opacity: 0;
+    width: 68px;
+    height: 35px;
+    position: absolute;
+    z-index: 2;
+}
+
+.form-iss>div {
+    width: 68px;
+    height: 35px;
+    position: absolute;
+}
+
+.remove-d {
+    left: 27.3%;
+}
+
+.remove-d>span {
+    color: #1992EF;
+    border-color: #1992EF;
+}
+
+.remove-a {
+    left: 34%;
+}
+
+.remove-b {
+    left: 40.5%;
+}
+
+.remove-c {
+    left: 47%;
+}
+
+.form-iss > .remove-e {
+    left: 53%;
+    width: 130px;
+    height: 35px;
+}
+
+.form-iss > .remove-f {
+    left: 60%;
+    width: 130px;
+    height: 35px;
+}
+
+.remove-f > span, .remove-e > span {
+
+    padding: 3.5% 6%;
+}
+
+
+.iss-but {
+    background: #F9FAFD;
+    border: 1px solid #E9E9E9;
+    border-radius: 4px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0.96px;
+    padding: 6.3% 22%;
+    position: absolute;
+    margin: 0 0.8%;
+}
+
+.col-sm-10 > .file-img {
+    width: 243px;
+    height: 142px;
+    position: absolute;
+    opacity: 0;
+    z-index:3;
+}
+
+.file-img-font {
+    margin-left: 3%;
+    font-size: 16px;
+    color: #888888;
+    letter-spacing: 0.96px;
+}
+
+.iss_cont .ai {
+    display: inline-block;
+    width: 30%;
+    margin-left: 5.8%;
+}
+
+.ai > label {
+    width: 27%;
+}
+
+.author-source {
+    width: 50%;
+    margin-left: 32%;
+}
+
+.iss_cont .form-group textarea {
+    width: 71%;
+    height: 300px;
+}
+
+.btn-primary {
+    width: 21%;
+    height: 9%;
+    margin: 2% 0 20% 15%;
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1.46px;
+    padding: 1.3% 0;
+    background: #1992EF;
+    border-radius: 4px;
+}
+
+#show {
+    position: absolute;
+    left: 13px;
+}
+
+
+/* 提交成功 */
+.iss-success {
+    width: 15.7%;
+    height: 26.9%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 24% auto 5%;
+}
+
+.iss-success-one {
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #2C323E;
+    letter-spacing: 1.5px;
+    margin-top: 3%;
+}
+
+.iss-success-two {
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #888888;
+    letter-spacing: 1.12px;
+    margin-top: 2%;
+}
+
+.btn-succ {
+    background: #1992EF;
+    border-radius: 4px;
+    width: 18%;
+    height: 4%;
+    margin-left: 41%;
+    color: white;
+}
+
+.btn-succ>a {
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.bushuang {
+    margin-top: 18px;
+}
+
+/* 支付 */
+
+
+
+/* 输入框字符判断 */
+.show_code1, .show_code2, .show_code3 {
+    position: absolute;
+    color: orangered;
+}
+
+.show_code1 {
+    top: 13px;
+    right: 33.8%;
+}
+
+.show_code2 {
+    top: 405px;
+    right: 36.2%;
+}
+
+.show_code3 {
+    top: 13px;
+    right: 32.7%;
+}

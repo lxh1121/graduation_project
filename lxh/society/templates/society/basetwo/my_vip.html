@@ -1,0 +1,92 @@
+{% extends 'society/base2.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/my_vip.css' %}">
+{% endblock %}
+
+{% block title %}
+    我的会员
+{% endblock %}
+
+{% block content %}
+    <div class="head">
+        <div class="vip-p">当前 <span class="blue">VIP {{ request.session.vip }}</span>级，本月剩余发布次数：<span class="blue f-big">{{ request.session.leave_count }}</span>次</div>
+        <a href="{% url 'society:pay' %}"><button class="vip-btn">续费 / 升级</button></a>
+    </div>
+    <hr>
+    <div class="level">
+        <div class="level-top">
+            <div class="title1_left_point">
+            </div>
+            <span class="ba_title">会员等级说明</span>
+        </div>
+        <div class="level-bot">
+            <div>
+                <img src="{% static 'society/image/v1.png' %}" alt="">
+                <div class="wenzi">
+                    <span class="blue f-sma">￥2000</span>
+                    <div class="gray">每个月可免费发布2条新闻</div>
+                </div>
+            </div>
+            <div >
+                <img src="{% static 'society/image/v2.png' %}" alt="">
+                <div class="wenzi">
+                    <span class="blue f-sma">￥5000</span>
+                    <div class="gray">每个月可免费发布5条新闻</div>
+                </div>
+            </div>
+            <div >
+                <img src="{% static 'society/image/v3.png' %}" alt="">
+                <div class="wenzi">
+                    <span class="blue f-sma">￥10000</span>
+                    <div class="gray">每个月可免费发布10条新闻</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="record">
+        <div>
+            <div class="title1_left_point">
+            </div>
+            <span class="ba_title">购买记录</span>
+        </div>
+        <ul class="record-ul">
+            {% for each in contacts %}
+            <li class="record-li">
+                <span class="record-span1">{{ each.title }}</span>
+                <span class="record-span2">￥{{ each.tran_money }}</span>
+                <span class="record-span3">{{ each.tran_date|date:"Y-m-d H:i"}}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <nav aria-label="Page navigation">
+          <ul class="pagination pagination-lg">
+              {% if contacts.has_previous %}
+                <li>
+                  <a href="?page={{ contacts.previous_page_number }}" aria-label="Previous" target="_parent">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+              {% endif %}
+
+              {% for pg in contacts.paginator.page_range %}
+                    {% if contacts.number == pg %}
+                        <li class="active"><a href="?page={{ pg }}" target="_parent">{{ pg }}</a></li>
+                    {% else %}
+                        <li><a href="?page={{ pg }}" target="_parent">{{ pg }}</a></li>
+                    {% endif %}
+              {% endfor %}
+              {% if contacts.has_next %}
+                    <li>
+                        <a href="?page={{ contacts.next_page_number }}" aria-label="Next" target="_parent">
+                             <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+              {% endif %}
+          </ul>
+        </nav>
+
+{% endblock %}

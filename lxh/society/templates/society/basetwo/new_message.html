@@ -1,0 +1,56 @@
+{% extends 'society/base2.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/my_vip.css' %}">
+{% endblock %}
+
+{% block title %}
+    消息通知
+{% endblock %}
+
+{% block content %}
+    {% load poll_extras %}
+    <div class="record">
+        <ul class="record-ul message-tz">
+            {% for each in contacts %}
+            <li class="record-li">
+                <span class="record-span1">{{ each.author.username }}评论了您的"{{ each.article.title }}"</span>
+                <span class="record-span3">{{ each.send_time|minus }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <nav aria-label="Page navigation">
+          <ul class="pagination pagination-lg">
+              {% if contacts.has_previous %}
+                <li>
+                  <a href="?page={{ contacts.previous_page_number }}" aria-label="Previous" target="_parent">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+              {% endif %}
+
+              {% for pg in contacts.paginator.page_range %}
+                    {% if contacts.number == pg %}
+                        <li class="active"><a href="?page={{ pg }}" target="_parent">{{ pg }}</a></li>
+                    {% else %}
+                        <li><a href="?page={{ pg }}" target="_parent">{{ pg }}</a></li>
+                    {% endif %}
+              {% endfor %}
+              {% if contacts.has_next %}
+                    <li>
+                        <a href="?page={{ contacts.next_page_number }}" aria-label="Next" target="_parent">
+                             <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+              {% endif %}
+
+          </ul>
+        </nav>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'society/js/basetwo/my_vip.js' %}"></script>
+{% endblock %}

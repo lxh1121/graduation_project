@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'society/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/bootstrap-theme.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/reset.css' %}">
+        {% block style %} {% endblock %}
+    </head>
+    <body>
+        <div class="ba1_head">
+            <div class="head1_left clear">
+                <a href="{% url 'society:main' %}"><img src="{% static 'image/logo.png' %}" alt=""></a>
+            </div>
+            <div class="head1_right clear">
+                {% block head %}
+
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="ba1_title">
+            <div class="title1_left clear">
+                <div class="title1_left_rec"></div>
+                <div class="title1_left_point">
+                </div>
+                <div class="title1_left_name">
+                    {% block usname %}{% endblock %}
+                </div>
+            </div>
+            <div class="title1_right clear">
+                <div class="title1_right_hint">
+                    {% block hint %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+    </body>
+</html>
+<script src="{% static 'society/js/jq3.js' %}"></script>
+<script src="{% static 'society/js/bootstrap.js' %}"></script>
+{% block js %}
+<script>
+    $('.form-control').click(function() {
+        $('.err').html('');
+    })
+</script>
+{% endblock %}

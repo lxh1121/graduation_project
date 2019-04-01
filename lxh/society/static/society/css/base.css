@@ -1,0 +1,82 @@
+.ba1_head {
+    width: 100%;
+    height: 72px;
+    margin: -4px 0 0 -4px;
+    background: #2c323e;
+}
+
+.head1_left {
+    float: left;
+    margin: 0.9% 0 0 17.3%;
+}
+
+.head1_right {
+    float: right;
+    margin: 1.3% 17.3% 0 0;
+}
+
+.ba1_title {
+    width: 66.0%;
+    height: 52px;
+    border: 1px solid #efefef;
+    margin: 0.7% auto 1%;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.title1_left {
+    width: 20%;
+    float: left;
+}
+
+.title1_left_rec {
+    width: 4px;
+    height: 50px;
+    background: #2C323E;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title1_left_point {
+    width: 6px;
+    height: 6px;
+    margin: 0 5% 0 6%;
+    background: #2C323E;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title1_left_name {
+    vertical-align: middle;
+    font-size: 16px;
+    display: inline-block;
+    font-family: PingFangSC-Semibold;
+    color: #2C323E;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.title1_right {
+    padding: 1% 2% 0 0;
+    width: 20%;
+    float: right;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.title1_right_hint {
+    float: right;
+    color: #1D3700;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+/* 主体内容 */
+.content {
+    width: 66%;
+    border: 1px solid #efefef;
+    min-height: 1072px;
+    /*background: bisque;*/
+    margin: 0 auto;
+}
+

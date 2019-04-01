@@ -1,0 +1,37 @@
+{% extends 'society/base2.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/css.css' %}">
+    <link rel="stylesheet" href="{% static 'society/css/basetwo/my_vip.css' %}">
+
+{% endblock %}
+
+{% block title %}
+    我的发布
+{% endblock %}
+
+{% block content %}
+    <div class="head">
+        <div class="find_nav_list">
+            <ul>
+                <li class="find_nav_cur"><a href="javascript:void(0)">全部</a></li>
+                <li><a href="javascript:void(0)">待审核</a></li>
+                <li><a href="javascript:void(0)">审核中</a></li>
+                <li><a href="javascript:void(0)">审核通过</a></li>
+                <li><a href="javascript:void(0)">审核未通过</a></li>
+                <li class="sideline"></li>
+                <li class="sidelineone"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="record-img">
+        <img src="{% static 'society/image/zan.png' %}" alt="">
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'society/js/basetwo/my_vip.js' %}"></script>
+    <script src="{% static 'society/js/basetwo/js.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends 'society/basethree/base3.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'society/css/basethree/arti_detail.css' %}">
+{% endblock %}
+
+{% block title %}
+     <div>
+         <div class="title1_left_point one-point"></div>
+         <span>新闻-新闻详情</span>
+     </div>
+{% endblock %}
+
+{% block flash_xq %}
+    <span class="hidde">{{ essay_deta.id }}</span>
+    <h2>{{ essay_deta.title }}</h2>
+    <div class="arti-cont-div clearf">
+        <span class="arti-auth">{{ essay_deta.pr_user.username }} &nbsp</span> |<span class="arti-time"> {{ essay_deta.distribute_date|date:'Y-m-d' }}</span>
+        <div class="arti-share"><img src="{% static 'society/image/k_03@2x.png' %}" alt="">{{ essay_deta.view_count }}</div>
+        <div class="arti-view"><img src="{% static 'society/image/k_02.png' %}" alt="">{{ essay_deta.share_count }}</div>
+    </div>
+    <hr>
+    <div class="digst">
+        {{ essay_deta.digest }}
+    </div>
+    <div class="content">
+        {{ essay_deta.content|safe }}
+    </div>
+    <span class="gray">
+        本文来源： {{ essay_deta.source }} &nbsp;&nbsp;
+        <!--文章作者: {{ essay_deta.author.nick_name }}-->
+    </span>
+    <div class="statement">
+        声明： 本文由入驻本网站的作者撰写，观点仅代表作者本人，绝不代表小灰系统赞同其观点或证实其描述。
+    </div>
+    <div class="votes {% if error == 22 %}vote-count{% endif %} {% if error == 24 %}btn-blue{% endif %}">
+        <img src="{% static 'society/image/good_n.png' %}" alt="">
+        <span class="votes-span">{{ essay_deta.votes_count }}</span>
+    </div>
+    <div class="share" onclick="window.location.href='{% url "society:share_arti" essay_deta.id %}';return False">
+        <img src="{% static 'society/image/fx_s.png' %}" alt="">
+        <span class="share-span">分享至</span>
+    </div>
+    <button class="comment">评论</button>
+    <div class="com-anima">
+        <img src="{% static 'society/image/birthday01.jpg' %}" alt="">
+        <input type="text" name="content" class="anima-input" maxlength="100" required><span class="show_code"></span>
+        <button class="anima-btn">确认</button>
+        <button class="off">取消</button>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'society/js/basethree/deta_share.js' %}"></script>
+    <script src="{% static 'js/textlimit.js' %}"></script>
+    <script>
+        var dj = true;
+        $('.vote-count').click(function () {
+            $(this).toggleClass('btn-blue');
+            var ca = $('.hidde').html();
+            var votes = $(this).children('.votes-span').html();
+            if (dj == true) {
+              votes = parseInt(votes)+1;
+            } else {
+                votes = parseInt(votes)-1;
+            }
+            dj = !dj;
+            $('.votes-span').html('');
+            $.ajax({
+                type: 'post',
+                url: "{% url 'society:di_vote'%}",
+                dataType: 'json',
+                data: {'ca': ca, 'vote': votes},
+                success: function (data) {
+                    $('.votes-span').html(data.vote);
+                },
+            });
+
+        });
+
+        $('.comment').click(function () {
+            $(this).toggleClass('comm-btn');
+            $('.com-anima').toggle();
+        });
+
+        $('.off').click(function () {
+            $('.com-anima').hide();
+        });
+
+        $('.anima-input').focus(function () {
+            $(this).textlimit('.show_code', 100);
+        });
+
+        $('.anima-btn').click(function () {
+            $('.com-anima').hide();
+            var ca = $('.hidde').html();
+            var content = $('.anima-input').val();
+            $.ajax({
+                type: 'post',
+                url: "{% url 'society:comm' %}",
+                data: {'ca': ca, 'content': content},
+                success: function (data) {
+                    alert(data.suce);
+                },
+            });
+        });
+
+    </script>
+{% endblock %}

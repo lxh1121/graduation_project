@@ -1,0 +1,187 @@
+body {
+    font-family: none;
+}
+
+
+/*左侧内容 */
+.ba_left {
+    margin: 0 1.6% 0 17.3%;
+    float: left;
+    width: 16.3%;
+    /*z-index: 10;*/
+}
+
+/* 头像 */
+.head_por {
+    width: 100%;
+    height: 200px;
+    background: #2C323E;;
+}
+
+.head_por_top {
+    height: 67%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6.3%;
+}
+
+.top_myname {
+    margin-top: 2.9%;
+    /*margin-left: 5.3%;*/
+}
+
+.img_vip {
+    vertical-align: middle;
+}
+
+.myname {
+    vertical-align: middle;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.85px;
+    line-height: 20px;
+    font-family: PingFangSC-Semibold;
+}
+
+.bot_left {
+    float: left;
+    width: 49%;
+}
+
+.bot_right {
+    float: right;
+    width: 49%;
+}
+
+.bot_left, .bot_right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bot_cent {
+    width: 1px;
+    height: 42px;
+    background: white;
+    float: left;
+    margin-top: 2px;
+}
+
+.head_por_bot, .bot_left_top {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.85px;
+    line-height: 20px;
+}
+
+.bot_left_bot, .bot_right_bot {
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    margin-top: 5%;
+}
+
+
+
+/* 左侧导航 */
+.list-bar {
+    background: white;
+    border: 1px solid #EFEFEF;
+    height: 882px;
+}
+
+.nav-stacked > li + li{
+    margin-top: 0;
+}
+
+.nav > .vip1 > a {
+    /*padding-left: 6.8%;*/
+}
+
+.nav > li > a {
+    height: 60px;
+    padding-top: 15px;
+    padding-left: 7.5%;
+}
+
+.fun_name {
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #2C323E;
+    letter-spacing: 1.23px;
+    margin-left: 1.7%;
+    vertical-align: middle;
+}
+
+.xia {
+    float: right;
+    margin-top: 4.5%;
+}
+
+.dropdown-menu {
+    width: 300px;
+    margin-top: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: none;
+}
+
+.dropdown-menu>li>a {
+    height: 55px;
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+    color: #2C323E;
+    letter-spacing: 1.09px;
+    padding-top: 6%;
+    padding-left: 17.5%;
+}
+
+
+/* 右侧内容 */
+
+.ba_right{
+    width: 47.1%;
+    height: 1060px;
+    border: 1px solid #EFEFEF;
+    float: left;
+    padding-left: 2%;
+    padding-right: 1.5%;
+    background: white;
+    /*z-index: 10;*/
+}
+
+/* 统一 标题 */
+.title1_left_point {
+    width: 6px;
+    height: 6px;
+    margin-right: 1.2%;
+    background: #2C323E;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.ba_right_title {
+    padding-top: 2.5%;
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+    color: #2C323E;
+    letter-spacing: 1px;
+}
+
+.ba_title {
+    font-size: 18px;
+    color: #2C323E;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.blue {
+    color: #1992EF;
+}
+
+body {
+    background: #F8F8FF;
+}

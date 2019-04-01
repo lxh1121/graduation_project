@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>最后一步不不不</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'society/css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/ba1_title.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'society/css/basethree/base3.css' %}">
+        {% block css %} {% endblock %}
+    </head>
+    <body>
+        <div class="ba1_head">
+            <div class="head1_left clear">
+                <a href="{% url 'society:main' %}"><img src="{% static 'image/logo.png' %}" alt=""></a>
+            </div>
+            <div class="head1_right">
+                <button class="fbcontent clear" ><a href="{% url 'society:iss_cont' %}" class="iss">发布内容</a></button>
+                {% if 'photo' in request.session %}
+                <a href="{% url 'society:change_data' %}"><img src="{% url 'media' request.session.photo %}" alt="" width="35px" height="35px" class="base-head-img"></a>
+                {% else %}
+                    <a href="{% url 'society:login' %}"><img src="{% url 'media' '20181024/07.jpg' %}" alt="" width="35px" height="35px" class="base-head-img"></a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="ba_left">
+            <div class="ba_left_navga">
+                <div class="point-categ black">
+                    {% block title %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="ba_left_bot">
+                {% block flash_xq %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="ba_right">
+            <div class="ba_right_top clearf">
+                <img src="{% static 'society/image/1540720317078.png' %}" alt="">
+                <div class="blue">关注公众号</div>
+                <span>最新抢先看>></span>
+            </div>
+            <div class="ba_right_bot">
+                <h4>热门新闻</h4>
+                <div class="right_bot_hot">
+                    <img src="{% static 'society/image/lbyt.png' %}" alt="">
+                    <div class="regis">去香港，打打底裤</div>
+                </div>
+                 {% for hotnew in hotnew_list %}
+                     <a href="{% url 'society:article_deta' hotnew.id %}">
+                        <div class="right_bot_json clearf">
+                            <img src="{% url 'media' hotnew.image %}" alt="">
+                            <div class="right_json_div">
+                                <div class="ppp">{{ hotnew.content|safe }}</div>
+                                <div class="arti-cont-div time-span">
+                                    <span>{{ hotnew.distribute_date|date:'Y-m-d' }}</span>
+                                </div>
+                            </div>
+                        </div>
+                     </a>
+                {% endfor %}
+            </div>
+
+        </div>
+    </body>
+</html>
+<script src="{% static 'society/js/jq3.js' %}"></script>
+{% block js %} {% endblock %}
+

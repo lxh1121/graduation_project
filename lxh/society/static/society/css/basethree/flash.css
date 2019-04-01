@@ -1,0 +1,123 @@
+.now {
+    font-family: PingFangSC-Semibold;
+    font-size: 20px;
+    color: #1992EF;
+    letter-spacing: 1px;
+    float: left;
+}
+
+.blue-point {
+    background: #3F7ADC;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 17px;
+}
+
+.flash-title .ablack {
+    font-size: 18px;
+    color: #2C323E;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.flash-title {
+    margin-top: -10px;
+    margin-left: -21px;
+    /*z-index: 2;*/
+}
+
+.new-flash {
+    height: 205px;
+    border-left: 3px solid #DCDCDC;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.flash-txt {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    font-size: 16px;
+    color: #5D5F62;
+    letter-spacing: 0.88px;
+    line-height: 26px;
+    margin-top: -15px;
+    height: 120px;
+}
+
+.flash-div {
+    width: 97.3%;
+    margin-left: 13px;
+}
+
+.ba_left_bot .show {
+    display: block;
+}
+
+
+/* 详情 */
+.flde-blue {
+    font-size: 22px;
+    color: #1992EF;
+    letter-spacing: 1.67px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+.fl-deta {
+    box-sizing: border-box;
+    margin-right: 25px;
+}
+
+.fl-deta-ablack {
+    font-size: 26px;
+    color: #2C323E;
+    letter-spacing: 1.5px;
+    margin: 30px 3px;
+    font-weight: bold;
+}
+
+.fl-deta-text {
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #5D5F62;
+    letter-spacing: 1.25px;
+    line-height: 34px;
+}
+
+.fl-deta-div {
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+    height: 30px;
+}
+
+.fl-share, .fl-view {
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #888888;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+}
+
+.kiss:hover {
+    color: #3F7ADC;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.fl-share > img {
+    width: 20px;
+    height: 20px;
+}
+
+.hidde {
+    display: none;
+}
+
