@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'lxh.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lxh_bs',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': '127.0.0.1',
+        'ENGINE': 
+        'NAME': 
+        'USER': 
+        'PASSWORD': 
+        'HOST': 
         'PORT': '3306',
     }
 }
@@ -136,9 +136,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.qq.com'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = '1771602325@qq.com'
-EMAIL_HOST_PASSWORD = 'oxcpfqlyhxkocgic'
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_BACKEND = 
+EMAIL_HOST = 
+EMAIL_PORT = 
+EMAIL_HOST_USER = 
+EMAIL_HOST_PASSWORD = 
+DEFAULT_FROM_EMAIL = 
